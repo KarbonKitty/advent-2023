@@ -17,9 +17,8 @@ for my $line (@lines) {
 my @sortedHandValues = sort { $a <=> $b } keys %valuedHands;
 
 my $sum = 0;
-my $i = 0;
 
-for $i (1..($#sortedHandValues + 1)) {
+for my $i (1..($#sortedHandValues + 1)) {
     my $bet = $valuedHands{$sortedHandValues[$i - 1]};
     $sum += ($bet * $i);
 }
